@@ -4,13 +4,14 @@
 //
 //  Created by Marcos André Novaes de Lara on 12/04/22.
 //
+//  View
 
 import SwiftUI
 
 struct ContentView: View {
-    var emojis = ["🚀", "✈️", "🏎", "🚂", "🚘", "🚖", "🏍", "🚗", "🚕", "🚓", "🚋", "🚅", "🛶", "🚁", "🛸", "🛳", "🛥"]
+    var emojis = ["🚀", "✈️", "🏎", "🚂", "🚘", "🚖", "🏍", "🚗", "🚕", "🚓", "🚋", "🚅", "🛶", "🚁", "🛸", "🛳", "🛥","🚙", "🚌", "🚎"]
     
-    @State var emojiCount = 4
+    @State var emojiCount = 20
     
     var body: some View {
         VStack {
@@ -23,37 +24,10 @@ struct ContentView: View {
             }
             }
             .foregroundColor(.red)
-            Spacer()
-            HStack {
-                remove
-                Spacer()
-                add
-            }
-            .padding(.horizontal)
-            .font(.largeTitle)
         }
         .padding(.horizontal)
     }
     
-    var remove: some View {
-        Button {
-            if emojiCount > 1 {
-                emojiCount -= 1
-            }
-        } label: {
-            Image(systemName: "minus.circle")
-        }
-    }
-    
-    var add: some View {
-        Button{
-            if emojiCount < emojis.count {
-                emojiCount += 1
-            }
-        } label: {
-            Image(systemName: "plus.circle")
-        }
-    }
 }
 
 struct CardView: View {
