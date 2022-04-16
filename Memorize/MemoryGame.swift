@@ -44,7 +44,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable { // Equatable signi
   }
   
   struct Card: Identifiable {
-    var isFaceUp = true
+    var isFaceUp = false
     var isMatched = false
     let content: CardContent
     let id: Int
