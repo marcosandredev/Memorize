@@ -25,8 +25,16 @@ class EmojiMemoryGame: ObservableObject { // ObservableObject Reconhece mudança
     model.cards
   }
   
-  // MARK: - Intent(s)
+  // MARK: - Intent(s)          // Intenção de fazer mudanças
   func choose(_ card: Card) {
     model.choose(card)
+  }
+  
+  func shuffle() {
+    model.shuffle()
+  }
+  
+  func restart() {
+    model = EmojiMemoryGame.createMemoryGame()
   }
 }
